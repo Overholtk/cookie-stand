@@ -9,7 +9,7 @@ var Seattle = {
     // gets a random number between minHourlyCustomers & maxHourlyCustomers, then multiplies it by avgCookies & stores it in a cookiesSold array specific to that store
     getCookiesHour: function(min,max) {
         cookiesSoldSeattle = [];
-        for(var i = 0; i < 14; i++){
+        for(var i = 0; i < operationHours.length; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldSeattle[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -25,7 +25,7 @@ var Tokyo = {
     avgCookies: 1.2,
     getCookiesHour: function(min,max) {
         cookiesSoldTokyo = [];
-        for(var i = 0; i < 14; i++){
+        for(var i = 0; i < operationHours.length; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldTokyo[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -41,7 +41,7 @@ var Dubai = {
     avgCookies: 3.7,
     getCookiesHour: function(min,max) {
         cookiesSoldDubai = [];
-        for(var i = 0; i < 14; i++){
+        for(var i = 0; i < operationHours.length; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldDubai[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -57,7 +57,7 @@ var Paris = {
     avgCookies: 2.3,
     getCookiesHour: function(min,max) {
         cookiesSoldParis = [];
-        for(var i = 0; i < 14; i++){
+        for(var i = 0; i < operationHours.length; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldParis[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -73,7 +73,7 @@ var Lima = {
     avgCookies: 4.6,
     getCookiesHour: function(min,max) {
         cookiesSoldLima = [];
-        for(var i = 0; i < 14; i++){
+        for(var i = 0; i < operationHours.length; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldLima[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -89,7 +89,7 @@ function printSeattle() {
     document.getElementById('sectionSeattle').appendChild(hSeattle);
     var cookiesListS = document.createElement('ul');
     // creates a list item for each hour the store is open and prints the amount of cookies sold for that hour, then appends it to the unordered list item cookiesListS
-    for(var i = 0; i < 14; i++){
+    for(var i = 0; i < operationHours.length; i++){
         var li = document.createElement('li');
         li.textContent = `${operationHours[i]}: ${Seattle.getCookiesHour(Seattle.minHourlyCustomers, Seattle.maxHourlyCustomers)[i]} cookies`;
         cookiesListS.appendChild(li);
@@ -102,7 +102,7 @@ function printTokyo() {
     hTokyo.textContent = 'Tokyo:';
     document.getElementById('sectionTokyo').appendChild(hTokyo);
     var cookiesListT = document.createElement('ul');
-    for(var i = 0; i <14; i++){
+    for(var i = 0; i < operationHours.length; i++){
         var li = document.createElement('li');
         li.textContent = `${operationHours[i]}: ${Tokyo.getCookiesHour(Tokyo.minHourlyCustomers, Tokyo.maxHourlyCustomers)[i]} cookies`;
         cookiesListT.appendChild(li);
@@ -115,7 +115,7 @@ function printDubai() {
     hDubai.textContent = 'Dubai:';
     document.getElementById('sectionDubai').appendChild(hDubai);
     var cookiesListD = document.createElement('ul');
-    for(var i = 0; i <14; i++){
+    for(var i = 0; i < operationHours.length; i++){
         var li = document.createElement('li');
         li.textContent = `${operationHours[i]}: ${Dubai.getCookiesHour(Dubai.minHourlyCustomers, Dubai.maxHourlyCustomers)[i]} cookies`;
         cookiesListD.appendChild(li);
@@ -128,7 +128,7 @@ function printParis() {
     hParis.textContent = 'Paris:';
     document.getElementById('sectionParis').appendChild(hParis);
     var cookiesListP = document.createElement('ul');
-    for(var i = 0; i <14; i++){
+    for(var i = 0; i < operationHours.length; i++){
         var li = document.createElement('li');
         li.textContent = `${operationHours[i]}: ${Paris.getCookiesHour(Paris.minHourlyCustomers, Paris.maxHourlyCustomers)[i]} cookies`;
         cookiesListP.appendChild(li);
@@ -141,7 +141,7 @@ function printLima() {
     hLima.textContent = 'Lima:';
     document.getElementById('sectionLima').appendChild(hLima);
     var cookiesListL = document.createElement('ul');
-    for(var i = 0; i <14; i++){
+    for(var i = 0; i < operationHours.length; i++){
         var li = document.createElement('li');
         li.textContent = `${operationHours[i]}: ${Lima.getCookiesHour(Lima.minHourlyCustomers, Lima.maxHourlyCustomers)[i]} cookies`;
         cookiesListL.appendChild(li);
