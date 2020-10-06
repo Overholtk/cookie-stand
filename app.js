@@ -86,7 +86,7 @@ function printSeattle() {
     var cookiesListS = document.createElement('ul');
     for(var i = 0; i < 14; i++){
         var li = document.createElement('li');
-        li.textContent = operationHours[i] + ': ' + Seattle.getCookiesHour(Seattle.minHourlyCustomers, Seattle.maxHourlyCustomers)[i] + " cookies";
+        li.textContent = `${operationHours[i]}: ${Seattle.getCookiesHour(Seattle.minHourlyCustomers, Seattle.maxHourlyCustomers)[i]} cookies`;
         cookiesListS.appendChild(li);
     }
     document.getElementById('sectionSeattle').appendChild(cookiesListS);
@@ -99,7 +99,7 @@ function printTokyo() {
     var cookiesListT = document.createElement('ul');
     for(var i = 0; i <14; i++){
         var li = document.createElement('li');
-        li.textContent = operationHours[i] + ': ' + Tokyo.getCookiesHour(Tokyo.minHourlyCustomers, Tokyo.maxHourlyCustomers)[i] + " cookies";
+        li.textContent = `${operationHours[i]}: ${Tokyo.getCookiesHour(Tokyo.minHourlyCustomers, Tokyo.maxHourlyCustomers)[i]} cookies`;
         cookiesListT.appendChild(li);
     }
     document.getElementById('sectionTokyo').appendChild(cookiesListT);
@@ -112,7 +112,7 @@ function printDubai() {
     var cookiesListD = document.createElement('ul');
     for(var i = 0; i <14; i++){
         var li = document.createElement('li');
-        li.textContent = operationHours[i] + ': ' + Dubai.getCookiesHour(Dubai.minHourlyCustomers, Dubai.maxHourlyCustomers)[i] + " cookies";
+        li.textContent = `${operationHours[i]}: ${Dubai.getCookiesHour(Dubai.minHourlyCustomers, Dubai.maxHourlyCustomers)[i]} cookies`;
         cookiesListD.appendChild(li);
     }
     document.getElementById('sectionDubai').appendChild(cookiesListD);
@@ -125,16 +125,27 @@ function printParis() {
     var cookiesListP = document.createElement('ul');
     for(var i = 0; i <14; i++){
         var li = document.createElement('li');
-        li.textContent = operationHours[i] + ': ' + Paris.getCookiesHour(Paris.minHourlyCustomers, Paris.maxHourlyCustomers)[i] + " cookies";
+        li.textContent = `${operationHours[i]}: ${Paris.getCookiesHour(Paris.minHourlyCustomers, Paris.maxHourlyCustomers)[i]} cookies`;
         cookiesListP.appendChild(li);
     }
     document.getElementById('sectionParis').appendChild(cookiesListP);
 }
 
-
+function printLima() {
+    var hLima = document.createElement('h2');
+    hLima.textContent = 'Lima:';
+    document.getElementById('sectionLima').appendChild(hLima);
+    var cookiesListL = document.createElement('ul');
+    for(var i = 0; i <14; i++){
+        var li = document.createElement('li');
+        li.textContent = `${operationHours[i]}: ${Lima.getCookiesHour(Lima.minHourlyCustomers, Lima.maxHourlyCustomers)[i]} cookies`;
+        cookiesListL.appendChild(li);
+    }
+    document.getElementById('sectionLima').appendChild(cookiesListL);
+}
 
 printSeattle();
 printTokyo();
 printDubai();
 printParis();
-
+printLima();
