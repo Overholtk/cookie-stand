@@ -6,7 +6,7 @@ var Seattle = {
     avgCookies: 6.3,
     getCookiesHour: function(min,max) {
         cookiesSoldSeattle = [];
-        for(var i = 0; i < 13; i++){
+        for(var i = 0; i < 14; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldSeattle[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -22,7 +22,7 @@ var Tokyo = {
     avgCookies: 1.2,
     getCookiesHour: function(min,max) {
         cookiesSoldTokyo = [];
-        for(var i = 0; i < 13; i++){
+        for(var i = 0; i < 14; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldTokyo[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -38,7 +38,7 @@ var Dubai = {
     avgCookies: 3.7,
     getCookiesHour: function(min,max) {
         cookiesSoldDubai = [];
-        for(var i = 0; i < 13; i++){
+        for(var i = 0; i < 14; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldDubai[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -54,7 +54,7 @@ var Paris = {
     avgCookies: 2.3,
     getCookiesHour: function(min,max) {
         cookiesSoldParis = [];
-        for(var i = 0; i < 13; i++){
+        for(var i = 0; i < 14; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldParis[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -70,7 +70,7 @@ var Lima = {
     avgCookies: 4.6,
     getCookiesHour: function(min,max) {
         cookiesSoldLima = [];
-        for(var i = 0; i < 13; i++){
+        for(var i = 0; i < 14; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
             cookiesSoldLima[i] = Math.ceil(custAmt * this.avgCookies);
 
@@ -84,9 +84,9 @@ function printSeattle() {
     hSeattle.textContent = 'Seattle:';
     document.getElementById('sectionSeattle').appendChild(hSeattle);
     var cookiesListS = document.createElement('ul');
-    for(var i = 0; i < 13; i++){
+    for(var i = 0; i < 14; i++){
         var li = document.createElement('li');
-        li.textContent = operationHours[i] + ': ' + Seattle.getCookiesHour(Seattle.minHourlyCustomers, Seattle.maxHourlyCustomers)[i];
+        li.textContent = operationHours[i] + ': ' + Seattle.getCookiesHour(Seattle.minHourlyCustomers, Seattle.maxHourlyCustomers)[i] + " cookies";
         cookiesListS.appendChild(li);
     }
     document.getElementById('sectionSeattle').appendChild(cookiesListS);
@@ -97,9 +97,9 @@ function printTokyo() {
     hTokyo.textContent = 'Tokyo:';
     document.getElementById('sectionTokyo').appendChild(hTokyo);
     var cookiesListT = document.createElement('ul');
-    for(var i = 0; i <13; i++){
+    for(var i = 0; i <14; i++){
         var li = document.createElement('li');
-        li.textContent = operationHours[i] + ': ' + Tokyo.getCookiesHour(Tokyo.minHourlyCustomers, Tokyo.maxHourlyCustomers)[i];
+        li.textContent = operationHours[i] + ': ' + Tokyo.getCookiesHour(Tokyo.minHourlyCustomers, Tokyo.maxHourlyCustomers)[i] + " cookies";
         cookiesListT.appendChild(li);
     }
     document.getElementById('sectionTokyo').appendChild(cookiesListT);
@@ -110,16 +110,31 @@ function printDubai() {
     hDubai.textContent = 'Dubai:';
     document.getElementById('sectionDubai').appendChild(hDubai);
     var cookiesListD = document.createElement('ul');
-    for(var i = 0; i <13; i++){
+    for(var i = 0; i <14; i++){
         var li = document.createElement('li');
-        li.textContent = operationHours[i] + ': ' + Dubai.getCookiesHour(Dubai.minHourlyCustomers, Dubai.maxHourlyCustomers)[i];
+        li.textContent = operationHours[i] + ': ' + Dubai.getCookiesHour(Dubai.minHourlyCustomers, Dubai.maxHourlyCustomers)[i] + " cookies";
         cookiesListD.appendChild(li);
     }
     document.getElementById('sectionDubai').appendChild(cookiesListD);
 }
 
+function printParis() {
+    var hParis = document.createElement('h2');
+    hParis.textContent = 'Paris:';
+    document.getElementById('sectionParis').appendChild(hParis);
+    var cookiesListP = document.createElement('ul');
+    for(var i = 0; i <14; i++){
+        var li = document.createElement('li');
+        li.textContent = operationHours[i] + ': ' + Paris.getCookiesHour(Paris.minHourlyCustomers, Paris.maxHourlyCustomers)[i] + " cookies";
+        cookiesListP.appendChild(li);
+    }
+    document.getElementById('sectionParis').appendChild(cookiesListP);
+}
+
+
 
 printSeattle();
 printTokyo();
 printDubai();
+printParis();
 
