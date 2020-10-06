@@ -1,3 +1,5 @@
+var operationHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+
 var Seattle = {
     minHourlyCustomers: 23,
     maxHourlyCustomers: 65,
@@ -22,7 +24,7 @@ var Tokyo = {
         cookiesSoldTokyo = [];
         for(var i = 0; i < 13; i++){
             var custAmt = Math.floor(Math.random() * (max - min + 1) + min);
-            cookiesSold[i] = Math.ceil(custAmt * this.avgCookies);
+            cookiesSoldTokyo[i] = Math.ceil(custAmt * this.avgCookies);
 
         }
         return cookiesSoldTokyo;
@@ -82,7 +84,6 @@ function printSeattle() {
     hSeattle.textContent = 'Seattle:';
     document.getElementById('sectionSeattle').appendChild(hSeattle);
     var cookiesListS = document.createElement('ul');
-    var operationHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
     for(var i = 0; i < 13; i++){
         var li = document.createElement('li');
         li.textContent = operationHours[i] + ': ' + Seattle.getCookiesHour(Seattle.minHourlyCustomers, Seattle.maxHourlyCustomers)[i];
@@ -95,6 +96,13 @@ function printTokyo() {
     var hTokyo = document.createElement('h2');
     hTokyo.textContent = 'Tokyo:';
     document.getElementById('sectionTokyo').appendChild(hTokyo);
+    var cookiesListT = document.createElement('ul');
+    for(var i = 0; i <13; i++){
+        var li = document.createElement('li');
+        li.textContent = operationHours[i] + ': ' + Tokyo.getCookiesHour(Tokyo.minHourlyCustomers, Tokyo.maxHourlyCustomers)[i];
+        cookiesListT.appendChild(li);
+    }
+    document.getElementById('sectionTokyo').appendChild(cookiesListT);
 }
 
 printSeattle();
