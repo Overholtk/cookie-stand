@@ -105,6 +105,21 @@ function printTokyo() {
     document.getElementById('sectionTokyo').appendChild(cookiesListT);
 }
 
+function printDubai() {
+    var hDubai = document.createElement('h2');
+    hDubai.textContent = 'Dubai:';
+    document.getElementById('sectionDubai').appendChild(hDubai);
+    var cookiesListD = document.createElement('ul');
+    for(var i = 0; i <13; i++){
+        var li = document.createElement('li');
+        li.textContent = operationHours[i] + ': ' + Dubai.getCookiesHour(Dubai.minHourlyCustomers, Dubai.maxHourlyCustomers)[i];
+        cookiesListD.appendChild(li);
+    }
+    document.getElementById('sectionDubai').appendChild(cookiesListD);
+}
+
+
 printSeattle();
 printTokyo();
+printDubai();
 
