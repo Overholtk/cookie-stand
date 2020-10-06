@@ -1,9 +1,12 @@
+// denotes the hours of operations for all stores
 var operationHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
+// gets the number of cookies sold per hour for the Seattle store
 var Seattle = {
     minHourlyCustomers: 23,
     maxHourlyCustomers: 65,
     avgCookies: 6.3,
+    // gets a random number between minHourlyCustomers & maxHourlyCustomers, then multiplies it by avgCookies & stores it in a cookiesSold array specific to that store
     getCookiesHour: function(min,max) {
         cookiesSoldSeattle = [];
         for(var i = 0; i < 14; i++){
@@ -79,11 +82,13 @@ var Lima = {
     },
 }
 
+//Prints the sales data for the Seattle store to the sales.html file
 function printSeattle() {
     var hSeattle = document.createElement('h2');
     hSeattle.textContent = 'Seattle:';
     document.getElementById('sectionSeattle').appendChild(hSeattle);
     var cookiesListS = document.createElement('ul');
+    // creates a list item for each hour the store is open and prints the amount of cookies sold for that hour, then appends it to the unordered list item cookiesListS
     for(var i = 0; i < 14; i++){
         var li = document.createElement('li');
         li.textContent = `${operationHours[i]}: ${Seattle.getCookiesHour(Seattle.minHourlyCustomers, Seattle.maxHourlyCustomers)[i]} cookies`;
