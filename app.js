@@ -45,11 +45,14 @@ createStoreObject.prototype.render = function(){
     var titleColumn = document.createElement('th');
     titleColumn.textContent = this.name;
     newRow.appendChild(titleColumn);
-    for(var i = 0; i < operationHours.length; i++){
+    for(var i = 0; i < (operationHours.length - 1); i++){
         var newCell = document.createElement('th');
         newCell.textContent = this.cookiesEachHour[i];
         newRow.appendChild(newCell);
     }
+    var addTotal = document.createElement('th');
+    addTotal.textContent = this.totalCookiesSold;
+    newRow.appendChild(addTotal);
 }
 
 var seattle = new createStoreObject('Seattle', 23, 65, 6.3)
