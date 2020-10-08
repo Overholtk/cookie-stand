@@ -8,6 +8,8 @@ var parentElement = document.getElementById('salesTable');
 var totalAllStores = 0;
 // Holds totalAllStores for every hour the stores are open
 var totalCookiesHourStores = [];
+// Tracks cookie totals for every store at every hour
+var totalCookiesTotalStores = 0;
 
 // Constructor Function: constructs an object for each store
 var CreateStoreObject = function(storeName, minimumCust, maximumCust, salesAvg) {
@@ -73,6 +75,19 @@ function generateData() {
   }
 }
 
+// Determines the amount of cookies sold per hour for all stores and stores it
+function getCookieArrayTotals(){
+  // Gets cookies per hour for every store and adds them together, then moves to the next hour
+  for(var i = 0; i < operationHours.length; i++){
+    for(var j = 0; j < allStores.length; j++){
+      totalAllStores += allStores[j].cookiesEachHour[i];
+      totalCookiesTotalStores += allStores[j].cookiesEachHour[i];
+    }
+    totalCookiesHourStores.push(totalAllStores);
+    totalAllStores = 0;
+  }
+}
+
 // Generates the first row of the table
 function generateHeaderRow() {
   var newRow = document.createElement('tr');
@@ -99,22 +114,10 @@ function renderTotals(){
     newRow.appendChild(newCell);
   }
   var addTotal = document.createElement('th');
-  addTotal.textContent = this.totalCookiesSold;
+  addTotal.textContent = totalCookiesTotalStores;
   newRow.appendChild(addTotal);
 }
 
-// Determines the amount of cookies sold per hour for all stores and stores it
-function getCookieArrayTotals(){
-  // Gets cookies per hour for every store and adds them together, then moves to the next hour
-  for(var i = 0; i < allStores[0].cookiesEachHour.length; i++){
-    for(var j = 0; j < allStores.length; j++){
-      totalAllStores += allStores[j].cookiesEachHour[i];
-    }
-    totalCookiesHourStores.push(totalAllStores);
-    console.log(totalCookiesHourStores);
-    totalAllStores = 0;
-  }
-}
 
 
 
