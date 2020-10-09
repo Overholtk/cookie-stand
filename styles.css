@@ -1,0 +1,96 @@
+*{
+    background-color: #d3a493;
+}
+
+#logo {
+    height: 100px;
+    position: relative;
+    left: 288px;
+}
+
+h1{
+
+    display: inline;
+    position: relative;
+    bottom: 35px;
+    left: 0px;
+    background-color: rgba(165, 42, 42, 0);
+    color: white;
+}
+
+#fishesTop{
+    float: right;
+    height: 110px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+nav{
+    position: relative;
+    left: 400px;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: black;
+}
+
+#text{
+    width: 400px;
+}
+
+.frame{
+    float: right;
+    position: relative;
+    bottom: 225px;
+    right: 250px;
+}
+
+.heading{
+    text-align: center;
+}
+
+#patsFamily{
+    width: 400px;
+}
+
+#familyText{
+    float: right;
+    width: 450px;
+    position: relative;
+    left: 200px;
+    bottom: 30px;
+}
+
+#textItsMade{
+    width: 350px;
+    display: inline-block;
+    position: relative;
+    bottom: 100px;
+}
+
+#frosted{
+    height: 250px;
+    position: relative;
+    bottom: 50px;
+}
+
+#fishes{
+    height: 70px;
+    border-radius: 50%;
+}
+
+#contact{
+    display: inline-block;
+}
+
+section{
+    background-color: #ecc8b4;
+}
+
+.textBox{
+    background-color: #ecc8b4;
+}
