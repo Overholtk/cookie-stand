@@ -15,9 +15,23 @@
         <table>
             <tbody id = "salesTable"></tbody>
         </table>
+    <form id = "newStoreForm">
+        <fieldset>
+            <legend>Add New Store:</legend>
+            <label for="storeName">Location</label>
+            <input type="text" id="storeName" name="storeName"></br>
+            <label for="minCustomers">Minimum Customers per Hour</label>
+            <input type="text" id="minCustomers" name="minCustomers"></br>
+            <label for="maxCustomers">Maximum Customers per Hour</label>
+            <input type="text" id="maxCustomers" name="maxCustomers"></br>
+            <label for="averagePurchAmt">Average Purchase Per Customer</label>
+            <input type="text" id="averagePurchAmt" name="averagePurchAmt"></br>
+            <input type="submit" id="submit" name="submit">
+        </fieldset>
+    </form>
     </main>
-    <footer></footer>
-    <script src="app.js"></script>
-    <!-- <script src="newpage.js"></script> -->
+    <footer>
+        <script src="app.js"></script>
+    </footer>
 </body>
 </html>

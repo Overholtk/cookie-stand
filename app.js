@@ -10,6 +10,8 @@ var totalAllStores = 0;
 var totalCookiesHourStores = [];
 // Tracks cookie totals for every store at every hour
 var totalCookiesTotalStores = 0;
+// Array of data for use in constructor function
+var formData = []
 
 // Constructor Function: constructs an object for each store
 var CreateStoreObject = function(storeName, minimumCust, maximumCust, salesAvg) {
@@ -131,3 +133,26 @@ paris.render();
 lima.render();
 getCookieArrayTotals();
 renderTotals();
+
+
+
+
+
+
+
+
+
+
+
+var FormElement = document.getElementById('newStoreForm');
+function handleSubmit(event) {
+  event.preventDefault();
+  var name = event.target.storeName.value;
+  var minHourlyCustomers = event.target.minCustomers.value;
+  var maxHourlyCustomers = event.target.maxCustomers.value;
+  var avgCookies = event.target.avgPurchAmt.value;
+  
+
+}
+
+formElement.addEventListener('submit', handleSubmit);

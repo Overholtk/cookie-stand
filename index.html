@@ -2,54 +2,58 @@
 <html>
 <head>
     <title>Salmon Cookies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img id = "logo" src="assets/salmon.png"/>
-        <h1>Salmon Cookies</h1>
-        <img id="fishesTop" src="assets/fish.jpg"/>
-        <nav>
+        <div id="headerLogo">
+            <img id="salmonLogo" src="assets/salmon.png"/>
+            <h1 id="title">Salmon Cookies</h1>
+        </div>
+        <nav id="navigation">
             <a href="index.html">Home</a>
             <a href="sales.html">Sales</a>
         </nav>
     </header>
     <main>
-        <section id="storesInfo">
-        <div id = "Text"></div>
-            <h2 class="textBox">Locations and Hours</h2>
-                <p class="textBox">Seattle: 1057  Ritter Street</p>
-                <p class="textBox">Tokyo: 1058  Bitter Street</p>
-                <p class="textBox">Dubai: 1059  Litter Street</p>
-                <p class="textBox">Paris: 1060  Titter Street</p>
-                <p class="textBox">Lima: 1061  Hitter Street</p>
-            <p class="textBox"> All stores are open form 6am to 7pm!</p>
+        <section id="storeInfo">
+        <div id="storeInfoValue">
+            <h2 class="headings">Locations and Hours</h2>
+            <ul>
+                <li>Seattle: 1057  Ritter Street</li>
+                <li>Tokyo: 1058  Bitter Street</li>
+                <li>Dubai: 1059  Litter Street</li>
+                <li>Paris: 1060  Titter Street</li>
+                <li>Lima: 1061  Chitter Street</li>
+        </ul>
+            <p id="mid"> All stores are open form 6am to 7pm!</p>
         </div>
-            <img class ="frame" src="assets/chinook.jpg"/>
+            <img id ="frame" src="assets/chinook.jpg"/>
         </section>
-        <section id="Story">
-            <h2 class="heading">Our Story</h2>
+        <section id="story">
+            <h2 class="headings">Our Story</h2>
             <img id="patsFamily" src="assets/family.jpg"/>
-            <p class="textBox" id="familyText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi sem, imperdiet et odio aliquam, euismod hendrerit ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec semper, lectus ac egestas tincidunt, urna sem efficitur nisl, vel venenatis sem ligula eget ipsum. Etiam pellentesque ac tellus ut congue. Etiam sit amet augue neque. Donec eu nisl congue, efficitur ante eu, blandit tellus. Duis pharetra fringilla magna, id hendrerit sem volutpat non. Maecenas feugiat turpis a metus laoreet eleifend.
+            <p id="familyText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi sem, imperdiet et odio aliquam, euismod hendrerit ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec semper, lectus ac egestas tincidunt, urna sem efficitur nisl, vel venenatis sem ligula eget ipsum. Etiam pellentesque ac tellus ut congue. Etiam sit amet augue neque. Donec eu nisl congue, efficitur ante eu, blandit tellus. Duis pharetra fringilla magna, id hendrerit sem volutpat non. Maecenas feugiat turpis a metus laoreet eleifend.
 
             Fusce consectetur, lorem vel viverra facilisis, quam quam consectetur lectus, id mattis felis dolor ac ligula. Duis sollicitudin dolor augue, et faucibus lectus venenatis ac. Nunc vel metus vestibulum, mollis risus at, rhoncus lorem. Phasellus eleifend cursus lacus ut rhoncus.</p>
         </section>
-        <section id="How It's Made">
-            <h2 class="heading">How They're Made</h2>
-            <img src="assets/cutter.jpeg"/>
-            <p class="textBox" id="textItsMade">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi sem, imperdiet et odio aliquam, euismod hendrerit ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec semper, lectus ac egestas tincidunt, urna sem efficitur nisl, vel venenatis sem ligula eget ipsum. Etiam pellentesque ac tellus ut congue.</p>
+        <section id="howItsMade">
+            <h2 class="headings">How They're Made</h2>
+            <img id="cookieCutter" src="assets/cutter.jpeg"/>
+            <p id="textItsMade">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi sem, imperdiet et odio aliquam, euismod hendrerit ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec semper, lectus ac egestas tincidunt, urna sem efficitur nisl, vel venenatis sem ligula eget ipsum. Etiam pellentesque ac tellus ut congue.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi sem, imperdiet et odio aliquam, euismod hendrerit ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec semper, lectus ac egestas tincidunt, urna sem efficitur nisl, vel venenatis sem ligula eget ipsum. Etiam pellentesque ac tellus ut congue.</p>
             <img id="frosted" src="assets/frosted-cookie.jpg"/>
         </section>
     </main>
     <footer>
         <img id="fishes" src="assets/fish.jpg"/>
         <div id="contact">
-        <p>Contact Us:</p>
-        <address>
-            Phone: (864)-555-3257
-        </br>
-            Email: Pat@salmoncookies.com
-        </address>
+            <p>Contact Us:</p>
+            <address>
+                Phone: (864)-555-3257
+                </br>
+                Email: Pat@salmoncookies.com
+            </address>
         </div>
     </footer>
 </body>
