@@ -19,21 +19,21 @@ header{
     margin-bottom: 40px;
     background-color: rgba(229, 200, 194);
 }
-#headerLogo{
+
+#salmonLogo{
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-}
-#salmonLogo{
     width: 350px;
+    position: relative;
+    left: 580px;
 }
 #title{
     background-color: rgba(0, 0, 0, 0);
     display: inline;
     position: relative;
     font-size: 30px;
-    bottom: 72px;
-    left: 60px;
+    bottom: 40px;
+    left: 290px;
     color: rgb(218, 238, 255);
     font-family: 'Courgette', cursive;
 }
@@ -102,8 +102,7 @@ li{
     float: right;
     width: 460px;
     position: relative;
-    bottom: 320px;
-    right: 120px;
+    left: 120px;
     font-size: 17px;
     text-align: center;
     font-family: 'Georgia', serif;
